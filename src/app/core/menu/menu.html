@@ -1,0 +1,22 @@
+<!-- <nav>
+    <ul width="100%">
+        <a routerLink=""><img src="favicon.ico" alt="BMDB" class="logo"></a>
+        <li *ngFor="let mi of menuItems" title="{{ mi.tooltip}}">
+            <a routerLink="{{ mi.href }}">{{ mi.display }}</a>
+        </li>
+    </ul>
+</nav> -->
+<nav>
+  <ul width="100%">
+    <a routerLink=""><img src="favicon.ico" alt="BMDB" class="logo" /></a>
+    <li title="Movie">
+      <a routerLink="/movie-list">Movie List</a>
+    </li>
+    <li *ngIf="user?.admin" title="Actor">
+      <a routerLink="/actor-list">Actor List</a>
+    </li>
+    <li title="Login">
+      <a routerLink="/user-login">User Login</a>
+    </li>
+  </ul>
+</nav>
