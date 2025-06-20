@@ -34,8 +34,8 @@ export class UserLogin implements OnInit, OnDestroy {
     this.subscription?.unsubscribe();
   }
 
-    login() {
-    console.log("UserLogin", this.userLoginDTO);
+  login() {
+    console.log('UserLogin', this.userLoginDTO);
     this.subscription = this.userSvc.login(this.userLoginDTO).subscribe({
       next: (resp) => {
         // successful login
